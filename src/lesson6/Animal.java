@@ -1,6 +1,6 @@
 package lesson6;
 
-abstract class Animal {
+abstract class Animal implements Running, Swimming {
     private static final int NOW_YEAR = 2021;
     private int wieght;
     private int birthYear;
@@ -11,6 +11,24 @@ abstract class Animal {
     }
 
     public Animal() {
+    }
+
+    public void iRun(int l, int runMax) {
+        if ( l <= runMax){
+            System.out.println(getName() + " пробежал " + l + "м");
+        } else {
+            System.out.println(getName() + " не смог пробежать больш " + runMax + "м");
+        }
+    }
+
+    public void iSwim(int l, int swimMax) {
+        if ( l <= swimMax){
+            System.out.println(getName() + " проплыл " + l + "м");
+        } else if ( swimMax == 0){
+            System.out.println(getName() + ", не умеет плавать!");
+        } else{
+            System.out.println(getName() + " утонул от изнурительного плавания после " + swimMax + "м");
+        }
     }
 
     public Animal(String name, int birthYear, int wieght) {

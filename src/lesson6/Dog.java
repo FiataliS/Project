@@ -14,19 +14,11 @@ class Dog extends Animal implements Running, Swimming {
 
     @Override
     public void iRun(int l) {
-        if ( l <= runMax){
-            System.out.println(super.getName() + " пробежал " + l + "м");
-        } else {
-            System.out.println(super.getName() + " не смог пробежать больш " + runMax + "м");
-        }
+        super.iRun(l,runMax);
     }
 
     @Override
     public void iSwim(int l) {
-        if ( l <= swimMax){
-            System.out.println(super.getName() + " проплыл " + l + "м");
-        } else {
-            System.out.println(super.getName() + " утонул от изнурительного плавания после " + swimMax + "м");
-        }
+        super.iSwim(l, swimMax);
     }
 }

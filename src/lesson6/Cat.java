@@ -14,15 +14,12 @@ class Cat extends Animal implements Running, Swimming {
 
     @Override
     public void iRun(int l) {
-        if ( l <= runMax){
-            System.out.println(super.getName() + " пробежал " + l + "м");
-        } else {
-            System.out.println(super.getName() + " не смог пробежать больше " + runMax + "м");
-        }
+        super.iRun(l,runMax);
     }
 
     @Override
     public void iSwim(int l) {
-            System.out.println("Кот " + super.getName() + ", не умеет плавать!");
+        super.iSwim(l, swimMax);
     }
 }
+
