@@ -17,7 +17,7 @@ abstract class Animal implements Running, Swimming {
         if ( l <= runMax){
             System.out.println(getName() + " пробежал " + l + "м");
         } else {
-            System.out.println(getName() + " не смог пробежать больш " + runMax + "м");
+            System.out.println(getName() + " не смог пробежать больше " + runMax + "м");
         }
     }
 
